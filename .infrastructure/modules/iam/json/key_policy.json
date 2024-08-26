@@ -3,19 +3,19 @@
     "Id":"sns_key_policy",
     "Statement": [
       {
-        "Sid": "IAM User Permissions",
+        "Sid": "iam-user-permissions",
         "Effect": "Allow",
         "Principal": {
-          "AWS": "arn:aws:iam::169002939622:root"
+          "AWS": "169002939622"
         },
         "Action": "kms:*",
         "Resource": "*"
       },
       {
-        "Sid": "Allow key administration",
+        "Sid": "allow-key-administration",
         "Effect": "Allow",
         "Principal": {
-          "AWS": "arn:aws:iam::169002939622:role/Admin"
+          "AWS": "169002939622"
         },
         "Action": [
           "kms:Create*",
@@ -34,10 +34,10 @@
         "Resource": "*"
       },
       {
-        "Sid": "Allow use",
+        "Sid": "allow-use",
         "Effect": "Allow",
         "Principal": {
-          "AWS": "arn:aws:iam::169002939622:role/Developer"
+          "AWS": "169002939622"
         },
         "Action": [
           "kms:Sign",
@@ -48,3 +48,4 @@
       }
     ]
   }
+  
